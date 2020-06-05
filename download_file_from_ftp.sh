@@ -20,7 +20,7 @@ DIR_TIMESTAMP=$(date +%Y%m%d)
 REMOTE_PERIODIC_PATH="${DIR_TIMESTAMP}/HGUPERIODIC"
 DOWNLOAD_FILE_REGX="HGUPERIODIC_${T}*_8*.gz"
 
-echo "------------ 获取 ${T} 人和周期上报文件 ------------"
+echo "------------ 获取 ${T} 周期上报文件 ------------"
 
 cd ${LOCAL_HGUPERIODIC_FILE_PATH}
 [ ! -d ${DIR_TIMESTAMP} ] && mkdir ${DIR_TIMESTAMP}
@@ -44,5 +44,5 @@ EOF
 if [ $? != 0 ];then
     echo "############ FTP ${ip} 连接超时 ############"
 else
-    echo "------------ 成功 获取 ${T} 人和周期上报数据文件 ------------"
+    echo "------------ 成功 获取 ${T} 周期上报数据文件 ------------"
 fi
